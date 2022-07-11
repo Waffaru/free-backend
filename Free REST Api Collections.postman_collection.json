@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "05374635-a6c7-4d95-8ff4-5e63163e1001",
+		"name": "Free REST Api Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SSN Requests",
+			"item": [
+				{
+					"name": "Social Verification - Success",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ssn\": \"131052-308T\",\r\n    \"countryCode\": \"FI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/social",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"social"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Social Verification - Failure",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ssn\": \"131052-308K\",\r\n    \"countryCode\": \"FI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/social",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"social"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exchange Requests",
+			"item": [
+				{
+					"name": "Exchange Request - Success",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Request - Failure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
